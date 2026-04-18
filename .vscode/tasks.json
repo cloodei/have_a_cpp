@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build with GCC",
+      "type": "shell",
+      "command": "D:/msys64/ucrt64/bin/gcc.exe",
+      "args": [
+        "-g",
+        "-std=c11",
+        "-Wall",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe"
+      ],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "Build with G++",
+      "type": "shell",
+      "command": "D:/msys64/ucrt64/bin/g++.exe",
+      "args": [
+        "-g",
+        "-std=c++23",
+        "-Wall",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe"
+      ],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "Build with Clang++",
+      "type": "shell",
+      "command": "D:/msys64/ucrt64/bin/clang++.exe",
+      "args": [
+        "-g",
+        "-std=c++23",
+        "-Wall",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe"
+      ],
+      "group": "build",
+      "problemMatcher": "$gcc"
+    }
+  ]
+}
