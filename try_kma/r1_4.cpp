@@ -18,7 +18,12 @@ int main() {
 
     ll n, x;
     cin >> n >> x;
-    for (ll i = 0; i < n; ++i)
+    for (ll i = 0; i < n / 2; i++) {
+        ll thing = g(x) % MOD;
+        x = (((thing * thing) % MOD) + ((2 * thing) % MOD) + 3) % MOD;
+    }
+
+    if (n & 1)
         x = g(x) % MOD;
 
     cout << x % MOD;
